@@ -1,0 +1,9 @@
+.header {
+    background-color:  #f8f9fa; 
+    height: 3em;
+    font-size: 2rem;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center; /* align vertically */
+    border-bottom: 1px solid #ccc;
+}   

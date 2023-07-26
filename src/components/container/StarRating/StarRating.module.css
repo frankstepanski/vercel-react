@@ -1,0 +1,13 @@
+.star {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.star input[type="radio"] {
+    display: none;
+}
+
+.starIcon {
+    cursor: pointer;
+    transition: color 500ms;
+}

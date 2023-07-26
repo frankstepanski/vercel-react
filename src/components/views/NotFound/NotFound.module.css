@@ -1,0 +1,44 @@
+
+.bgImage {
+   background-image: url('../../../assets/images/lost.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 83vh; /* offset the footer height - hack */
+    padding-top: 4rem;
+
+}
+
+.notFound {
+    text-align: center;
+}
+
+.notFound h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    text-shadow: 2px 1px 0 #7A7A7A;
+}
+
+.notFound h3 {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    margin-bottom: 2rem;
+}
+
+/*
+    https://www.bestcssbuttongenerator.com/
+*/
+.notFound button {
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-size:20px;
+	font-weight:bold;
+	padding:14px 44px;
+	text-decoration:none;
+	text-shadow:0px 0px 1px #ffffff;
+}

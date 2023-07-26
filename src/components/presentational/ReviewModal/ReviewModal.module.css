@@ -1,0 +1,29 @@
+.reviewModalContent  {
+    margin-bottom: 1rem;
+}
+ 
+.reviewModalHeader {
+    background-color: #333366;
+    padding: .5rem 0 0 1rem;
+    color: #fff;
+    font-weight: 400;
+    height: 5rem;
+}
+ 
+.reviewModalHeader h2 {
+     font-size: 1.5rem;
+}
+
+.modalCloseButton {
+    cursor: pointer;
+    position: absolute; 
+    top: 0;
+    right: 0;
+    margin: .6rem 1rem 0 0;
+    background-color: #333366;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    padding: .2rem;
+}

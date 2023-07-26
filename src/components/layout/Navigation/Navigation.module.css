@@ -1,0 +1,11 @@
+.nav {
+    flex-basis: 100%;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

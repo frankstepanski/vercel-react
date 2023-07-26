@@ -1,0 +1,44 @@
+.home {
+    padding: 2%;
+}
+
+.home p {
+    font-size: 1.5rem;
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+    width: 87%;
+    margin:  1% auto 2%;
+    padding: 3%;
+    border-radius: .5em;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.featuredMoviesContainer {
+    width: 90%;
+    margin: auto;
+}
+
+.featuredMoviesList {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem
+}
+
+.featuredMovie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%; /* keep all images same size */
+}
+
+.featuredMovieInfo {
+    margin-top: 1rem;
+}

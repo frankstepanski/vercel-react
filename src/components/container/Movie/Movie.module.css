@@ -1,0 +1,70 @@
+.movieContainer {
+    margin-bottom: 1rem;
+    padding: 1%;
+ }
+ 
+ .movieContainer:nth-child(odd) {
+     border: 1px solid #ccc;
+     background-color: #f8f9fa;
+ }
+
+ .movieInfoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 371px; /* keep height even with image posters */
+    margin: .5rem 0 .5rem 0;
+}
+
+.movieDetails li:first-child:before {
+    content: '';
+}
+
+.movieHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movieHeader ul {
+    display: flex;
+    list-style: none;
+}
+
+.movieHeader ul li {
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    font-weight: 400;
+    box-shadow: .1rem .1rem #ccc;
+    padding: .2rem .7rem .2rem .7rem;
+    margin: .5rem;
+    border-radius: 1rem;
+}
+
+.movieDetails {
+    width: 15%;
+}
+
+.movieDetails li {
+    display:inline-block;
+}
+
+/* 
+  https://www.kevinleary.net/horizontal-bulleted-lists-css/
+*/
+
+.movieDetails li::before {
+    content: '\00a0\2022\00a0\00a0';
+    color:#999;
+    font-size:16px;
+}
+
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movieDescription {
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}

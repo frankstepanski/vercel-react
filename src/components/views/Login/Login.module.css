@@ -1,0 +1,31 @@
+.login {
+    padding: 2%;
+}
+
+.loginForm {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 25%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.loginForm input {
+    padding: .5rem;
+    margin: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 2%;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.success {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 1rem;
+}

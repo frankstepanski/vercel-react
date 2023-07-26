@@ -1,0 +1,8 @@
+.moviesMenu {
+    display: flex;
+    padding: 0 0 .2rem 0;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    border-bottom: 1px solid #ccc;
+}
