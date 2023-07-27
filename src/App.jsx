@@ -11,22 +11,19 @@ import NotFound from './components/views/NotFound/NotFound';
 import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
 import {navLinks} from "./assets/data/navLinks.js";
-import {getAllMovies} from "./services/";
+import STORE from "./assets/data/STORE.json";
 
 import './assets/styles/reset.css';
 import './assets/styles/global.css';
-
-const URL = "https://626adc4f6a86cd64adb45a12.mockapi.io/movies"
 
 function App() {
   const [color, setColor] = useState("#FFF");
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState(false);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(STORE);
   const [featuredMovies, setFeaturedMovies] = useState([]);
   const [visibleMovies, setVisibleMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
   const moviesPerPage = 5;
@@ -38,18 +35,10 @@ function App() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   useEffect(() => {
-
-    setIsLoading(true);
     
-    getAllMovies(URL)
-        .then((data) => {
-            setMovies(data);
-            setFeaturedMovies([...data].filter(movie => movie.featured === true));
-            setVisibleMovies([...data].filter(movie => movie.hidden === false));
-            setIsLoading(false);
-        }).catch(err => {
-          console.log(err);
-        })
+    setFeaturedMovies([...movies].filter(movie => movie.featured === true));
+    setVisibleMovies([...movies].filter(movie => movie.hidden === false));
+         
   }, []);
 
   const loginUser = (username, password) => {
@@ -113,7 +102,7 @@ function App() {
       <Header links = {navLinks} token = {token} />
       <main style={{ backgroundColor: color }}>
         <Routes>
-            <Route index element={<Home movies={featuredMovies} isLoading={isLoading} />} />
+            <Route index element={<Home movies={featuredMovies} />} />
             <Route 
                   path='movies' 
                   element={
@@ -121,7 +110,6 @@ function App() {
                                      movies={currentMovies}
                                      handleFilters = {handleFilters}
                                      addReview={addReview}
-                                     isLoading={isLoading}
                                      moviesPerPage={moviesPerPage}
                                      currentPage={currentPage}
                                      paginate={paginate}

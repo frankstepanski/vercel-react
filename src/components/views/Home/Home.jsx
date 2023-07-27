@@ -13,19 +13,17 @@ const Home = (props) => {
                 <h2>Featured Movies:</h2>
                 <div className={styles.featuredMoviesList}>
                 {
-                    !props.isLoading  ? 
-                        props.movies.map((item, index) => {
-                            return (
-                                <div key={index} className={styles.featuredMovie}>
-                                    <a rel="noreferrer" href={item.imdb} target="_blank" ><img src={item.image} alt={item.alt} /></a>
-                                    <div className={styles.featuredMovieInfo}>
-                                        <h3>{item.title}</h3>
-                                    </div>
+                    props.movies.map((item, index) => {
+                        return (
+                            <div key={index} className={styles.featuredMovie}>
+                                <a rel="noreferrer" href={item.imdb} target="_blank" ><img src={item.image} alt={item.alt} /></a>
+                                <div className={styles.featuredMovieInfo}>
+                                    <h3>{item.title}</h3>
                                 </div>
+                            </div>
                         )
                     })
-                    :
-                    <p>Loading...</p>
+                   
                 }
                 </div>
             </section>  

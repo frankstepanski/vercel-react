@@ -5,7 +5,6 @@ import SyncLoader from "react-spinners/SyncLoader";
 import styles from "./Movies.module.css";
 
 const Movies = ({
-    isLoading,
     handleFilters,
     movies,
     addReview,
@@ -29,8 +28,7 @@ const Movies = ({
             
             <div className={styles.moviesListContainer}>
                 {
-                    !isLoading ? <MovieList movies={movies} addReview={addReview} />
-                    : <p><SyncLoader loading={isLoading} color={color} size={12} /></p>
+                     <MovieList movies={movies} addReview={addReview} />
                 }
             </div>
         </div>
